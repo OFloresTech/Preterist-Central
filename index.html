@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding Preterism - A Biblical Perspective</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .fade-in {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease forwards;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .scroll-indicator {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 4px;
+            background: linear-gradient(to right, #667eea, #764ba2);
+            z-index: 1000;
+            transition: width 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-indicator" id="scrollIndicator"></div>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold text-indigo-600">Preterism Study</h1>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-indigo-600 transition-colors nav-link">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-indigo-600 transition-colors nav-link">About</a>
+                    <a href="#types" class="text-gray-700 hover:text-indigo-600 transition-colors nav-link">Types</a>
+                    <a href="#scriptures" class="text-gray-700 hover:text-indigo-600 transition-colors nav-link">Key Scriptures</a>
+                    <a href="#resources" class="text-gray-700 hover:text-indigo-600 transition-colors nav-link">Resources</a>
+                </div>
+                <button class="md:hidden hamburger" id="hamburger">
+                    <span class="block w-6 h-0.5 bg-gray-600 mb-1"></span>
+                    <span class="block w-6 h-0.5 bg-gray-600 mb-1"></span>
+                    <span class="block w-6 h-0.5 bg-gray-600"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 fade-in">Understanding Preterism</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto fade-in" style="animation-delay: 0.2s;">
+                Exploring the biblical perspective that many prophecies were fulfilled in the first century
+            </p>
+            <button onclick="scrollToSection('about')" class="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors fade-in" style="animation-delay: 0.4s;">
+                Learn More
+            </button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">What is Preterism?</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Preterism is a Christian eschatological view that interprets many biblical prophecies as having been fulfilled in the past, particularly during the destruction of Jerusalem in 70 AD.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4 text-indigo-600">The Preterist Perspective</h3>
+                    <p class="text-gray-700 mb-4">
+                        The term "preterism" comes from the Latin word "praeteritus," meaning "gone by" or "past." Preterists believe that Jesus' prophecies about the "end times" were primarily referring to the end of the Old Covenant age, which culminated with the destruction of Jerusalem and the Temple in 70 AD.
+                    </p>
+                    <p class="text-gray-700 mb-4">
+                        This interpretation emphasizes the historical context of biblical prophecy and the first-century fulfillment of many passages that are often viewed as referring to future events.
+                    </p>
+                </div>
+                <div class="bg-gray-100 p-8 rounded-lg">
+                    <h4 class="text-xl font-semibold mb-4 text-gray-900">Key Principles</h4>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <span class="text-indigo-600 mr-2">•</span>
+                            Historical fulfillment of prophecy
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-indigo-600 mr-2">•</span>
+                            Audience relevance principle
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-indigo-600 mr-2">•</span>
+                            Symbolic language interpretation
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-indigo-600 mr-2">•</span>
+                            First-century context emphasis
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Types of Preterism -->
+    <section id="types" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center text-gray-900 mb-16">Types of Preterism</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg shadow-lg p-8 card-hover">
+                    <div class="text-center mb-6">
+                        <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-2xl font-bold text-blue-600">P</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Partial Preterism</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">
+                        Partial preterists believe that many prophecies, including those about the Second Coming in judgment upon Jerusalem, were fulfilled in 70 AD, but maintain that the final resurrection and final judgment are still future.
+                    </p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li>• Olivet Discourse fulfilled in 70 AD</li>
+                        <li>• Some aspects of Revelation fulfilled</li>
+                        <li>• Future bodily resurrection</li>
+                        <li>• Future final judgment</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-8 card-hover">
+                    <div class="text-center mb-6">
+                        <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-2xl font-bold text-purple-600">F</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Full Preterism</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">
+                        Full preterists (also called hyper-preterists) believe that all biblical prophecies, including the Second Coming, resurrection, and final judgment, were fulfilled by 70 AD.
+                    </p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li>• All prophecy fulfilled by 70 AD</li>
+                        <li>• Spiritual resurrection view</li>
+                        <li>• Past judgment complete</li>
+                        <li>• Present eternal state</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Scriptures -->
+    <section id="scriptures" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center text-gray-900 mb-16">Key Scriptures</h2>
+            <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
+                <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg p-6 border border-blue-200">
+                    <h3 class="text-lg font-semibold mb-3 text-indigo-700">Matthew 24:34</h3>
+                    <p class="text-gray-700 italic mb-3">"Truly I tell you, this generation will certainly not pass away until all these things have happened."</p>
+                    <p class="text-sm text-gray-600">Often cited as evidence for first-century fulfillment of Jesus' prophecies.</p>
+                </div>
+                <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-lg p-6 border border-green-200">
+                    <h3 class="text-lg font-semibold mb-3 text-emerald-700">Matthew 16:28</h3>
+                    <p class="text-gray-700 italic mb-3">"Truly I tell you, some who are standing here will not taste death before they see the Son of Man coming in his kingdom."</p>
+                    <p class="text-sm text-gray-600">Suggests an imminent fulfillment within the disciples' lifetime.</p>
+                </div>
+                <div class="bg-gradient-to-br from-purple-50 to-violet-50 rounded-lg p-6 border border-purple-200">
+                    <h3 class="text-lg font-semibold mb-3 text-violet-700">Revelation 1:1</h3>
+                    <p class="text-gray-700 italic mb-3">"The revelation from Jesus Christ, which God gave him to show his servants what must soon take place."</p>
+                    <p class="text-sm text-gray-600">The word "soon" suggests nearness in time for the original audience.</p>
+                </div>
+                <div class="bg-gradient-to-br from-orange-50 to-red-50 rounded-lg p-6 border border-orange-200">
+                    <h3 class="text-lg font-semibold mb-3 text-red-700">Hebrews 8:13</h3>
+                    <p class="text-gray-700 italic mb-3">"By calling this covenant 'new,' he has made the first one obsolete; and what is obsolete and outdated will soon disappear."</p>
+                    <p class="text-sm text-gray-600">Indicates the Old Covenant was in the process of passing away.</p>
+                </div>
+                <div class="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-lg p-6 border border-teal-200">
+                    <h3 class="text-lg font-semibold mb-3 text-cyan-700">1 Peter 4:7</h3>
+                    <p class="text-gray-700 italic mb-3">"The end of all things is near. Therefore be alert and of sober mind so that you may pray."</p>
+                    <p class="text-sm text-gray-600">Peter's audience understood "the end" to be imminent.</p>
+                </div>
+                <div class="bg-gradient-to-br from-pink-50 to-rose-50 rounded-lg p-6 border border-pink-200">
+                    <h3 class="text-lg font-semibold mb-3 text-rose-700">James 5:8-9</h3>
+                    <p class="text-gray-700 italic mb-3">"You too, be patient and stand firm, because the Lord's coming is near... The Judge is standing at the door!"</p>
+                    <p class="text-sm text-gray-600">James viewed the Lord's coming as imminent to his readers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources -->
+    <section id="resources" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center text-gray-900 mb-16">Study Resources</h2>
+            <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg shadow-lg p-6 card-hover">
+                    <h3 class="text-xl font-semibold mb-4 text-indigo-600">Books</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>• "The Parousia" by J. Stuart Russell</li>
+                        <li>• "Before Jerusalem Fell" by Kenneth Gentry</li>
+                        <li>• "Last Days Madness" by Gary DeMar</li>
+                        <li>• "The Beast of Revelation" by Kenneth Gentry</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6 card-hover">
+                    <h3 class="text-xl font-semibold mb-4 text-indigo-600">Historical Context</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>• Jewish War (66-70 AD)</li>
+                        <li>• Destruction of Jerusalem</li>
+                        <li>• End of the Temple system</li>
+                        <li>• Josephus' historical accounts</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6 card-hover">
+                    <h3 class="text-xl font-semibold mb-4 text-indigo-600">Study Topics</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>• Time statements in prophecy</li>
+                        <li>• Symbolic language in Scripture</li>
+                        <li>• Audience relevance principle</li>
+                        <li>• Covenant transitions</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h3 class="text-2xl font-bold mb-4">Continue Your Study</h3>
+                <p class="text-gray-400 mb-6 max-w-2xl mx-auto">
+                    This website provides an introduction to preterist thought. We encourage you to study Scripture diligently and seek wisdom in understanding God's Word.
+                </p>
+                <p class="text-gray-500 text-sm">
+                    "Study to show yourself approved unto God, a workman that needs not to be ashamed, rightly dividing the word of truth." - 2 Timothy 2:15
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                scrollToSection(targetId);
+            });
+        });
+
+        function scrollToSection(targetId) {
+            const target = document.getElementById(targetId);
+            const offset = 80; // Account for fixed navigation
+            const targetPosition = target.offsetTop - offset;
+            
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
+        }
+
+        // Scroll progress indicator
+        window.addEventListener('scroll', function() {
+            const scrollProgress = document.getElementById('scrollIndicator');
+            const totalHeight = document.body.scrollHeight - window.innerHeight;
+            const progress = (window.pageYOffset / totalHeight) * 100;
+            scrollProgress.style.width = progress + '%';
+        });
+
+        // Fade in animation on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        // Observe sections for animation
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Mobile menu toggle (basic implementation)
+        const hamburger = document.getElementById('hamburger');
+        hamburger.addEventListener('click', function() {
+            // You can expand this to show/hide a mobile menu
+            alert('Mobile menu would expand here. This is a basic implementation.');
+        });
+
+        // Add some interactivity to scripture cards
+        document.querySelectorAll('.bg-gradient-to-br').forEach(card => {
+            card.addEventListener('click', function() {
+                this.classList.add('transform', 'scale-105');
+                setTimeout(() => {
+                    this.classList.remove('transform', 'scale-105');
+                }, 200);
+            });
+        });
+    </script>
+</body>
+</html>
